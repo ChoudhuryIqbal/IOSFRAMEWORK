@@ -40,7 +40,8 @@ public class TestBase {
 		
 		cap.setCapability("appiumVersion","1.5.3");
 		cap.setCapability("deviceName", "iPhone Simulator");
-		cap.setCapability("browserName","safari");
+		cap.setCapability("browserName","");
+		cap.setCapability("app","sauce-storage:UICatalog.zip");
 		driver = new IOSDriver<>(new URL("http://CIqbalInfosys:de85ce6a-c297-4460-b778-ce39cfa9260d@ondemand.saucelabs.com:80/wd/hub"), cap);
 		//if its android should be emulator
 		//DesiredCapabilities cap = new DesiredCapabilities();
@@ -52,13 +53,16 @@ public class TestBase {
 		//cap.setCapability(MobileCapabilityType.APP, "/Users/choudhuryiqbal/Desktop/UICatalog.app");
 		//driver = new IOSDriver<>(new URL("http://127.0.0.1:4723/wd/hub"), cap);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		driver.get("http://gmail.com");
-		Thread.sleep(8000);
+	//	driver.get("http://gmail.com");
+		Thread.sleep(2000);
 //		driver.findElementById("Email").sendKeys("rahul");
 //		driver.findElementByName("Passwd").sendKeys("rahul");
 //		driver.findElementByName("signIn").click();*/
 	}
 	@Test
+	public void sauceIosApp(){
+		
+	}
 	public void sauceLabSafariIOs(){
 		System.out.println("test with chao!!");
 		

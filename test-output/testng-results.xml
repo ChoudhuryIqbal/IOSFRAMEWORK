@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="96232" started-at="2017-08-09T17:17:14Z" finished-at="2017-08-09T17:18:50Z">
+  <suite name="Default suite" duration-ms="64478" started-at="2017-08-09T19:36:02Z" finished-at="2017-08-09T19:37:06Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="96232" started-at="2017-08-09T17:17:14Z" finished-at="2017-08-09T17:18:50Z">
+    <test name="Default test" duration-ms="64478" started-at="2017-08-09T19:36:02Z" finished-at="2017-08-09T19:37:06Z">
       <class name="com.MobileAutomationFRameworkForIos.ios_framework.TestBase">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.MobileAutomationFRameworkForIos.ios_framework.TestBase@6d4b1c02]" name="setUp" is-config="true" duration-ms="95943" started-at="2017-08-09T13:17:14Z" finished-at="2017-08-09T13:18:50Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.MobileAutomationFRameworkForIos.ios_framework.TestBase@6d4b1c02]" name="setUp" is-config="true" duration-ms="64193" started-at="2017-08-09T15:36:02Z" finished-at="2017-08-09T15:37:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="sauceLabSafariIOs()[pri:0, instance:com.MobileAutomationFRameworkForIos.ios_framework.TestBase@6d4b1c02]" name="sauceLabSafariIOs" duration-ms="5" started-at="2017-08-09T13:18:50Z" finished-at="2017-08-09T13:18:50Z">
+        <test-method status="PASS" signature="sauceIosApp()[pri:0, instance:com.MobileAutomationFRameworkForIos.ios_framework.TestBase@6d4b1c02]" name="sauceIosApp" duration-ms="7" started-at="2017-08-09T15:37:06Z" finished-at="2017-08-09T15:37:06Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- sauceLabSafariIOs -->
-        <test-method status="PASS" signature="quito()[pri:0, instance:com.MobileAutomationFRameworkForIos.ios_framework.TestBase@6d4b1c02]" name="quito" is-config="true" duration-ms="244" started-at="2017-08-09T13:18:50Z" finished-at="2017-08-09T13:18:50Z">
+        </test-method> <!-- sauceIosApp -->
+        <test-method status="PASS" signature="quito()[pri:0, instance:com.MobileAutomationFRameworkForIos.ios_framework.TestBase@6d4b1c02]" name="quito" is-config="true" duration-ms="227" started-at="2017-08-09T15:37:06Z" finished-at="2017-08-09T15:37:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quito -->

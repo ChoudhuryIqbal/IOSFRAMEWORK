@@ -5,6 +5,7 @@
     <classes>
       <class name="com.MobileAutomationFRameworkForIos.ios_framework.TestBase">
         <methods>
+          <include name="sauceLabSafariIOs"/>
           <include name="setUp"/>
         </methods>
       </class> <!-- com.MobileAutomationFRameworkForIos.ios_framework.TestBase -->

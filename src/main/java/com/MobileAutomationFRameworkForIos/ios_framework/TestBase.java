@@ -13,6 +13,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import io.appium.java_client.TouchAction;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.ios.IOSElement;
 import io.appium.java_client.remote.AutomationName;
@@ -26,25 +27,49 @@ public class TestBase {
 	 * Sets the up.
 	 *
 	 * @throws MalformedURLException the malformed URL exception
+	 * @throws InterruptedException 
 	 */
-	@Test
-	public void setUp() throws MalformedURLException {
-		DesiredCapabilities cap = new DesiredCapabilities();
-		cap.setCapability(MobileCapabilityType.DEVICE_NAME, "iPhone 6");
-		cap.setCapability(MobileCapabilityType.BROWSER_NAME,"chrome");
-		cap.setCapability(MobileCapabilityType.PLATFORM_NAME, "IOS");
-		cap.setCapability(MobileCapabilityType.PLATFORM_VERSION,"10.1.2  ");
-		cap.setCapability(MobileCapabilityType.AUTOMATION_NAME, AutomationName.IOS_XCUI_TEST);
+	@BeforeMethod
+	public void setUp() throws MalformedURLException, InterruptedException {
+		
+		DesiredCapabilities cap = new DesiredCapabilities().iphone();
+		
+		
+		cap.setCapability("platformName","iOS");
+		cap.setCapability("platformVersion","8.4");
+		
+		cap.setCapability("appiumVersion","1.5.3");
+		cap.setCapability("deviceName", "iPhone Simulator");
+		cap.setCapability("browserName","safari");
+		driver = new IOSDriver<>(new URL("http://CIqbalInfosys:de85ce6a-c297-4460-b778-ce39cfa9260d@ondemand.saucelabs.com:80/wd/hub"), cap);
+		//if its android should be emulator
+		//DesiredCapabilities cap = new DesiredCapabilities();
+		//cap.setCapability(MobileCapabilityType.PLATFORM_NAME, "IOS");
+		//cap.setCapability(MobileCapabilityType.BROWSER_NAME,"chrome");
+		//cap.setCapability(MobileCapabilityType.PLATFORM_NAME, "IOS");
+		//cap.setCapability(MobileCapabilityType.DEVICE_NAME, "iPhone 6");
+		//cap.setCapability(MobileCapabilityType.AUTOMATION_NAME, AutomationName.IOS_XCUI_TEST);
 		//cap.setCapability(MobileCapabilityType.APP, "/Users/choudhuryiqbal/Desktop/UICatalog.app");
-		driver = new IOSDriver<>(new URL("http://127.0.0.1:4723/wd/hub"), cap);
+		//driver = new IOSDriver<>(new URL("http://127.0.0.1:4723/wd/hub"), cap);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.get("http://gmail.com");
-		driver.findElementById("Email").sendKeys("rahul");
-		driver.findElementByName("Passwd").sendKeys("rahul");
-		driver.findElementByName("signIn").click();
+		Thread.sleep(8000);
+//		driver.findElementById("Email").sendKeys("rahul");
+//		driver.findElementByName("Passwd").sendKeys("rahul");
+//		driver.findElementByName("signIn").click();*/
 	}
-	
+	@Test
+	public void sauceLabSafariIOs(){
+		System.out.println("test with chao!!");
+		
+	}
 	public void SafariBrowser(){
+		scrollios("down");
+		driver.findElementByAccessibilityId("Switches").click();
+		TouchAction a2=new TouchAction(driver);
+		
+		a2.tap(164,204).perform();
+	
 		
 	}
 
@@ -57,7 +82,7 @@ public class TestBase {
 
 	}
 	
-
+@AfterMethod
 	public void quito(){
 		driver.quit();
 	}
